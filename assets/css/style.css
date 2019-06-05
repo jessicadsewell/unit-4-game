@@ -35,3 +35,7 @@ img {
     height: 120px;
     margin: 30px 20px;
 }
+
+#scores {
+    text-align: center;
+}

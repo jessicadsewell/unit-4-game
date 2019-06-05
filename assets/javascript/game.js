@@ -40,10 +40,8 @@ $(document).ready(function () {
     var num3 = Math.floor(Math.random() * 11 + 1);
     var num4 = Math.floor(Math.random() * 11 + 1);
 
-    $("wins-text").text(wins);
-    $("losses-text").text(losses);
-
-
+    
+    
     //create a function to start/reset the game
     function reset() {
         randomNum = Math.floor(Math.random() * 101 + 19); // create a new random number between 19 and 120
@@ -57,37 +55,60 @@ $(document).ready(function () {
         $("#totalScore").text(score);
         // Assign each value to a crystal
     };
-
+    
     reset();
     // Update wins on the page
     // Update losses on the page
-
+    
     //create a function to test win.lose
     function result() {
         if (score === randomNum) {// If score  === goal 
             alert("You won!");
             wins++;
+            $("#wins-text").text("Wins: " + wins);
             reset(); // call reset function
         } else if (score > randomNum) {// If score > goal
             alert("You lost this time!")
             losses++;
+            $("#losses-text").text("Losses: " + losses);
             reset();
             // call reset function
         };
         result();
-
-        $("#fries-img").on("click", function () {
-            score = score + num1;
-            console.log("New score = " + score);
-            $("#totalScore").text(score);
-            result();
-        })
-        // create a click event
-
-
+        
+        
+        
         // grab the value of the item that clicked on 
         // Add that to the players score
         // call win/loss
-
+        
     }
+    $("#fries-img").on("click", function () {
+        score = score + num1;
+        console.log("New score = " + score);
+        $("#totalScore").text(score);
+        result();
+    })
+    
+    $("#taco-img").on("click", function () {
+        score = score + num2;
+        console.log("New score = " + score);
+        $("#totalScore").text(score);
+        result();
+    })
+    
+    $("#ice-cream-img").on("click", function () {
+        score = score + num3;
+        console.log("New score = " + score);
+        $("#totalScore").text(score);
+        result();
+    })
+    
+    $("#sandwich-img").on("click", function () {
+        score = score + num4;
+        console.log("New score = " + score);
+        $("#totalScore").text(score);
+        result();
+    })
+    // create a click event
 });
