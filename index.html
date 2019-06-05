@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,45 +9,58 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+    </body>
 </head>
+
 <body>
 
     <div class="jumbotron">
         <h1 class="text-center">Food Collector Game!</h1>
     </div>
-    
-    <div class = container>
-        <div class="directions-text">
-            
-            <p> You will be given a random number at the start of the game.</p>
-            <br>
-            <p>There are four food options below. By clicking on a food item, you will add a specific amount of points to your total score.</p>
-            <br>
-            <p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
-            <br>
-            <p>The value of each puppy is hidden from you until you click on it.</p>
-            <br>
-            <p>Each time when the game starts, the game will change the values of each food item.</p>
+
+    <div class=container>
+        <div class="row">
+            <div class=col-md-6>
+                <div class="directions-text">
+
+                    <p> You will be given a random number at the start of the game.</p>
+                    <br>
+                    <p>There are four food options below. By clicking on a food item, you will add a specific amount of
+                        points to your total score.</p>
+                    <br>
+                    <p>You win the game by matching your total score to the random number, you lose the game if your
+                        total score goes above the random number.</p>
+                    <br>
+                    <p>The value of each food item is hidden from you until you click on it.</p>
+                    <br>
+                    <p>Each time when the game starts, the game will change the values of each food item.</p>
+                </div>
+            </div>
+            <div class=col-md>
+                <div class="random-number"></div>
+
+                <div class="wins-losses">
+                    <div id="wins-text">Wins:</div>
+                    <div id="losses-text">Losses:</div>
+                </div>
+            </div>
+            <div class="user-score">
+                <h2>Your total score:</h2>
+                <span id="totalScore"></span>
+            </div>
         </div>
-        
-        <div class="random-number"></div>
-        
-        <div class="wins-losses">
-            <div id="wins-text">Wins:</div>
-            <div id="losses-text">Losses:</div>
+        <div class="row">
+            <div class="food-holder">
+                <img src="assets/images/fries.png" id="fries-img" alt="fries image" />
+                <img src="assets/images/taco.png" id="taco-img" alt="taco image" />
+                <img src="assets/images/ice-cream-cone.png" id="ice-cream-img" alt="ice cream image">
+                <img src="assets/images/sandwich.jpeg" id="sandwich-img" alt="sandwich image" />
+            </div>
         </div>
-        
-        <div class="crystal-holder">
-            <img src="assets/images/fries.png" id="fries-img" alt="fries image" />
-            <img src="assets/images/taco.png" id="taco-img" alt="taco image" />
-            <img src="assets/images/ice-cream-cone.png" id="ice-cream-img" alt="ice cream image">
-            <img src="assets/images/sandwich.jpeg" id="sandwich-img" alt="sandwich image" />
-        </div>
-        <div class="user-score">Your total score:</div>
     </div>
-    </body>
-    </html>
+</body>
 
-
-
+</html>

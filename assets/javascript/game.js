@@ -23,43 +23,71 @@
 
 // ##### Option 1 Game design notes 
 
-//create variables to track 
+$(document).ready(function () {
+    //create variables to track 
 
-var wins = 0;
-var losses = 0;
-var randomNum = Math.floor((Math.random() * 120) + 19);// Goal for the round (random number)
-var score = 0 // Score
-var randomVal = Math.floor((Math.random() * 12) + 1);// Value of each items 
+    var wins = 0;
+    var losses = 0;
+    var score = 0 // users score
 
-function reset() {
-    var newRandomNum = Math.floor((Math.random() * 120) + 19);
-    $(".random-number").html(randomNum);
-    var newRandomVal = Math.floor((Math.random() * 12) + 1);
-    $("")
-}
+    var randomNum = Math.floor((Math.random() * 101) + 19);// Goal for the round (random number)
 
-//create a function to start/reset the game
-        // Update wins on the page
-        // Update losses on the page
-        // create a new random number between 19 and 120
-        // Update random number on the page
-        // create new values for each crystal between 1 and 12
+    $("#randomNumber").text(randomNum);
+
+    //Variables for 4 random numbers
+    var num1 = Math.floor(Math.random() * 11 + 1);
+    var num2 = Math.floor(Math.random() * 11 + 1);
+    var num3 = Math.floor(Math.random() * 11 + 1);
+    var num4 = Math.floor(Math.random() * 11 + 1);
+
+    $("wins-text").text(wins);
+    $("losses-text").text(losses);
+
+
+    //create a function to start/reset the game
+    function reset() {
+        randomNum = Math.floor(Math.random() * 101 + 19); // create a new random number between 19 and 120
+        console.log(randomNum)
+        $(".random-number").text(randomNum); // Update random number on the page
+        num1 = Math.floor(Math.random() * 11 + 1); // create new values for each food item between 1 and 12
+        num2 = Math.floor(Math.random() * 11 + 1);
+        num3 = Math.floor(Math.random() * 11 + 1);
+        num4 = Math.floor(Math.random() * 11 + 1);
+        score = 0; // reset score to 0
+        $("#totalScore").text(score);
         // Assign each value to a crystal
-        // reset score to 0
+    };
 
-//create a function to test win.lose
-  // If score  === goal 
-            // wins ++
+    reset();
+    // Update wins on the page
+    // Update losses on the page
+
+    //create a function to test win.lose
+    function result() {
+        if (score === randomNum) {// If score  === goal 
+            alert("You won!");
+            wins++;
+            reset(); // call reset function
+        } else if (score > randomNum) {// If score > goal
+            alert("You lost this time!")
+            losses++;
+            reset();
             // call reset function
-        // If score > goal
-            // losses ++
-            // call reset function
+        };
+        result();
 
-// create a click event
-    // grab the value of the item that clicked on 
-    // Add that to the players score
-    // call win/loss
+        $("#fries-img").on("click", function () {
+            score = score + num1;
+            console.log("New score = " + score);
+            $("#totalScore").text(score);
+            result();
+        })
+        // create a click event
 
-    $(document).ready(function() {
-    });
-        
+
+        // grab the value of the item that clicked on 
+        // Add that to the players score
+        // call win/loss
+
+    }
+});

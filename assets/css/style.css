@@ -19,7 +19,7 @@ img {
     margin: 30px 20px;
 }
 .wins-losses {
-    background-color: lightgreen;
+    background-color: lightgrey;
     width: 200px;
     height: 120px;
     margin: 30px 20px;
@@ -30,7 +30,7 @@ img {
 }
 
 .user-score {
-    background-color: lightgreen;
+    background-color:lightgrey;
     width: 200px;
     height: 120px;
     margin: 30px 20px;
