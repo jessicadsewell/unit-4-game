@@ -23,7 +23,7 @@
 
     <div class=container>
         <div class="row">
-            <div class=col-md-6>
+            <div class=col-md>
                 <div class="directions-text">
 
                     <p> You will be given a random number at the start of the game.</p>
@@ -40,10 +40,14 @@
                 </div>
             </div>
             <div class=col-md id="scores">
-                <div class="random-number"></div>
+                <div class="computerChoice">
+                    <h3>Goal Number:</h3>
+                    <div id="random-number">
+                    </div>
+                </div>
 
                 <div class="wins-losses">
-                    <div id="wins-text"> <h3>Wins:</h3></div>
+                    <div id="wins-text"><h3>Wins:</h3></div>
                     <div id="losses-text"><h3>Losses:</h3></div>
                 </div>
                 <div class="user-score">
@@ -51,16 +55,15 @@
                     <span id="totalScore"></span>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="food-holder">
-                <img src="assets/images/fries.png" id="fries-img" alt="fries image" />
-                <img src="assets/images/taco.png" id="taco-img" alt="taco image" />
-                <img src="assets/images/ice-cream-cone.png" id="ice-cream-img" alt="ice cream image">
-                <img src="assets/images/sandwich.jpeg" id="sandwich-img" alt="sandwich image" />
+            <div class="col-md">
+                <div class="food-holder">
+                    <img src="assets/images/fries.png" id="fries-img" alt="fries image" />
+                    <img src="assets/images/taco.png" id="taco-img" alt="taco image" />
+                    <img src="assets/images/ice-cream-cone.png" id="ice-cream-img" alt="ice cream image">
+                    <img src="assets/images/sandwich.jpeg" id="sandwich-img" alt="sandwich image" />
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>

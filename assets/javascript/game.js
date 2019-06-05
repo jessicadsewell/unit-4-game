@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     var randomNum = Math.floor((Math.random() * 101) + 19);// Goal for the round (random number)
 
-    $("#randomNumber").text(randomNum);
+    $("#random-number").text(randomNum);
 
     //Variables for 4 random numbers
     var num1 = Math.floor(Math.random() * 11 + 1);
@@ -46,7 +46,7 @@ $(document).ready(function () {
     function reset() {
         randomNum = Math.floor(Math.random() * 101 + 19); // create a new random number between 19 and 120
         console.log(randomNum)
-        $(".random-number").text(randomNum); // Update random number on the page
+        $("#random-number").text(randomNum); // Update random number on the page
         num1 = Math.floor(Math.random() * 11 + 1); // create new values for each food item between 1 and 12
         num2 = Math.floor(Math.random() * 11 + 1);
         num3 = Math.floor(Math.random() * 11 + 1);
