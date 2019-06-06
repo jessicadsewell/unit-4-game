@@ -83,6 +83,7 @@ $(document).ready(function () {
         // call win/loss
         
     }
+    // create a click event
     $("#fries-img").on("click", function () {
         score = score + num1;
         console.log("New score = " + score);
@@ -110,5 +111,4 @@ $(document).ready(function () {
         $("#totalScore").text(score);
         result();
     })
-    // create a click event
 });
