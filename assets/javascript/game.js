@@ -65,12 +65,12 @@ $(document).ready(function () {
         if (score === randomNum) {// If score  === goal 
             alert("You won!");
             wins++;
-            $("#wins-text").text("Wins: " + wins);
+            $("#wins-text").html("<h3>Wins: </h3>" + wins);
             reset(); // call reset function
         } else if (score > randomNum) {// If score > goal
             alert("You lost this time!")
             losses++;
-            $("#losses-text").text("Losses: " + losses);
+            $("#losses-text").html("<h3>Losses: </h3>" + losses);
             reset();
             // call reset function
         };

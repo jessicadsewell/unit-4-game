@@ -21,12 +21,13 @@ img {
 .wins-losses {
     background-color: lightgrey;
     width: 200px;
-    height: 120px;
+    height: 120px auto;
     margin: 30px 20px;
 }
 
 #wins-text, #losses-text {
-    text-align: left;
+    text-align: center;
+    font-size: 30px;
 }
 
 .user-score {
